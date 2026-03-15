@@ -20,24 +20,22 @@ export default function Contact() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            href="mailto:hello@misaeljordy.com" 
+            href="mailto:hello@zhenx.site" 
             className="text-xl md:text-2xl font-light underline decoration-1 underline-offset-8 hover:text-accent-blue transition-colors cursor-none"
           >
-            hello@misaeljordy.com
+            hello@zhenx.site
           </motion.a>
         </div>
         <div className="w-full md:w-1/3 flex flex-col items-start md:items-end text-left md:text-right">
           <div className="space-y-2 mb-12">
             <p className="text-xs uppercase tracking-widest font-bold">Social</p>
             <div className="flex flex-col gap-1 text-gray-500 uppercase text-[10px] tracking-widest">
-              <a href="#" className="hover:text-black transition-colors cursor-none">LinkedIn</a>
-              <a href="#" className="hover:text-black transition-colors cursor-none">GitHub</a>
-              <a href="#" className="hover:text-black transition-colors cursor-none">Twitter (X)</a>
-              <a href="#" className="hover:text-black transition-colors cursor-none">Dribbble</a>
+              <a href="https://www.linkedin.com/in/misaeljordy/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors cursor-none">LinkedIn</a>
+              <a href="https://github.com/zhenxxx7" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors cursor-none">GitHub</a>
             </div>
           </div>
           <p className="text-[10px] tracking-widest uppercase opacity-40">
-            © 2024 Misael Jordy — All Rights Reserved
+            © 2026 ZHENNX — All Rights Reserved
           </p>
         </div>
       </div>

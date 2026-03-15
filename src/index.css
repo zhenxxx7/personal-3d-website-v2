@@ -13,6 +13,47 @@ body {
   color: #fff;
   cursor: none;
   overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Safari and Chrome */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animated Liquid Glass Effect - Apple Style */
+@keyframes liquidBounce {
+  0% { transform: scale(1); }
+  33% { transform: scaleX(1.04) scaleY(0.96); }
+  66% { transform: scaleX(0.98) scaleY(1.06); }
+  100% { transform: scale(1.02) scaleY(1.02); }
+}
+
+.liquid-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.03); /* Very subtle white */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Pure white trace */
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: -1;
+}
+
+.group:hover .liquid-bg {
+  animation: liquidBounce 1.5s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+  background-color: rgba(255, 255, 255, 0.1); /* Brighter pure white on hover, no gray */
+  border-color: rgba(255, 255, 255, 0.5); /* Glowing white border */
+  /* Remove inset box-shadow as it can create grey mud artifacts on black background */
+}
+
+.group:active .liquid-bg {
+  animation: none;
+  transform: scale(0.96);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 .grain-bg {
